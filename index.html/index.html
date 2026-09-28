@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostafa | Flutter Developer</title>
+<meta name="description" content="Mostafa, Flutter developer available for freelance mobile app projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f8fb; --ink: #0b1f33; --muted: #5b6b7c;
+    --blue: #027dfd; --line: #dce4ec; --card: #fff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  body { font-family: "IBM Plex Sans", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  h1, h2, h3, .logo { font-family: "Sora", system-ui, sans-serif; line-height: 1.15; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  header { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+  nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
+  .logo { font-size: 20px; font-weight: 700; text-decoration: none; }
+  nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+  nav ul a { text-decoration: none; font-size: 15px; padding: 4px 0; }
+  nav ul a:hover { color: var(--blue); }
+
+  /* Buttons */
+  .btn { display: inline-block; padding: 11px 22px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1.5px solid var(--blue); }
+  .btn-fill { background: var(--blue); color: #fff; }
+  .btn-fill:hover { background: #0166d1; }
+  .btn-line { color: var(--blue); background: transparent; }
+  .btn-line:hover { background: #e6f1ff; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 6fr 4fr; gap: 48px; align-items: center; padding: 96px 24px; }
+  .hero h1 { font-size: clamp(38px, 6vw, 64px); font-weight: 800; }
+  .hero .role { font-family: "Sora", sans-serif; color: var(--blue); font-weight: 600; font-size: clamp(22px, 3vw, 32px); margin: 8px 0 20px; }
+  .hero p { font-size: 18px; color: var(--muted); margin-bottom: 28px; max-width: 52ch; }
+  pre.code { background: var(--ink); color: #b9c6d3; padding: 24px; border-radius: 12px; font: 14px/1.8 "IBM Plex Mono", monospace; overflow-x: auto; }
+  pre.code .s { color: #6fd3ff; } pre.code .b { color: #ffc857; }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section h2 { font-size: 30px; font-weight: 700; margin-bottom: 28px; }
+  .about p { font-size: 18px; color: var(--muted); max-width: 70ch; margin-bottom: 24px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+  .skills li { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-weight: 500; }
+
+  /* About with photo */
+  .about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; }
+  .photo { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; background: var(--line); border: 4px solid var(--card); box-shadow: 0 0 0 1px var(--line); }
+
+  .grid { display: grid; gap: 20px; }
+  .grid.two { grid-template-columns: repeat(2, 1fr); }
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+  .card h3 { font-size: 20px; margin-bottom: 10px; }
+  .card p { color: var(--muted); }
+  .card .tech { color: var(--blue); font-weight: 600; margin: 14px 0 10px; }
+  .card a.link { font-weight: 600; color: var(--blue); }
+  .icon { font-size: 30px; margin-bottom: 12px; }
+
+  .contact p { font-size: 18px; color: var(--muted); margin-bottom: 24px; }
+  footer { text-align: center; color: var(--muted); padding: 32px 24px; font-size: 14px; }
+
+  @media (max-width: 800px) {
+    .hero { grid-template-columns: 1fr; padding: 48px 24px; gap: 32px; }
+    .grid.two, .grid.three { grid-template-columns: 1fr; }
+    nav ul { gap: 14px; }
+    .about-grid { grid-template-columns: 1fr; gap: 24px; }
+    .photo { width: 160px; height: 160px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main">
+    <a class="logo" href="#top">Mostafa</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1>Hi, I am Mostafa.</h1>
+      <div class="role">Flutter Developer</div>
+      <p>I build fast, clean mobile apps with Flutter and Dart, from UI design to Firebase backend.</p>
+      <div class="btns">
+        <a class="btn btn-fill" href="#projects">View projects</a>
+        <a class="btn btn-line" href="#contact">Hire me</a>
+      </div>
+    </div>
+    <pre class="code" aria-hidden="true">Developer(
+  name: <span class="s">'Mostafa'</span>,
+  builds: <span class="s">['Android', 'iOS', 'Web']</span>,
+  availableForFreelance: <span class="b">true</span>,
+);</pre>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <img class="photo" src="C:\Users\bahgat\OneDrive\Desktop\portafilu\WhatsApp Image 2026-09-28 at 6.00.58 PM.jpeg" alt="Photo of Mostafa">
+      <div>
+        <h2>About me</h2>
+        <p>I am a university student specializing in Flutter mobile development, based in Egypt. I turn ideas and Figma designs into polished Android and iOS apps, and I am available for freelance projects and internships.</p>
+        <ul class="skills">
+          <li>Flutter</li><li>Dart</li><li>Firebase</li><li>REST APIs</li>
+          <li>Provider / Bloc</li><li>Git &amp; GitHub</li><li>Figma to UI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Task Manager App</h3>
+          <p>Create, edit and track daily tasks with reminders and offline storage.</p>
+          <div class="tech">Flutter, Hive, Provider</div>
+          <a class="link" href="https://github.com/your-username/task-app" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+        <article class="card">
+          <h3>Weather App</h3>
+          <p>Live weather and 5-day forecast for any city using a public API.</p>
+          <div class="tech">Flutter, REST API, Bloc</div>
+          <a class="link" href="https://github.com/your-username/weather-app" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+        <article class="card">
+          <h3>Shop App</h3>
+          <p>Product list, cart and checkout flow with Firebase authentication.</p>
+          <div class="tech">Flutter, Firebase, Riverpod</div>
+          <a class="link" href="https://github.com/your-username/shop-app" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What I can build for you</h2>
+      <div class="grid three">
+        <div class="card"><div class="icon">📱</div><h3>Mobile apps</h3><p>Full Android and iOS apps from one Flutter codebase.</p></div>
+        <div class="card"><div class="icon">🎨</div><h3>Figma to Flutter</h3><p>Pixel-accurate screens built from your design files.</p></div>
+        <div class="card"><div class="icon">☁️</div><h3>Firebase &amp; APIs</h3><p>Login, database, notifications and REST API integration.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let's work together</h2>
+      <p>Have an app idea? Send me a message and I will reply within a day.</p>
+      <div class="btns">
+        <a class="btn btn-fill" href="mailto:your.email@example.com">Email me</a>
+        <a class="btn btn-line" href="https://wa.me/20XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/mostafa-ahmed-727878405?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-line" href="https://github.com/Mostafa-Ahmed1714" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="y"></span> Mostafa. All rights reserved.</footer>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
